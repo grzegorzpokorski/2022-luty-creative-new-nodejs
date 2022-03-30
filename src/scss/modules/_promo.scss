@@ -1,0 +1,80 @@
+.promo{
+	&__figure{
+		position: relative;
+		margin-bottom: 0;
+		overflow: hidden;
+
+		&:before,
+		&:after{
+			content: '';
+			position: absolute;
+			background-color: $green;
+			transition: all .35s;
+		}
+
+		&:before{
+			top: .75rem;
+			left: .75rem;
+			width: 3rem;
+			height: 3rem;
+			z-index: 0;
+		}
+
+		&:after{
+			bottom: 0rem;
+			right: .75rem;
+			width: 9.125rem;
+			height: 9.125rem;
+			z-index: 0;
+		}
+
+		&:hover{
+			&:after{
+				margin-right: .375rem;
+				margin-bottom: .375rem;
+			}
+
+			&:before{
+				margin-left: .375rem;
+			}
+		}
+
+		&--related{
+			&:hover{
+				&:after{
+					margin-right: .375rem;
+					margin-bottom: .375rem;
+				}
+
+				&:before{
+					margin-left: .1875rem;
+				}
+			}
+		}
+	}
+
+	&__image{
+		position: relative;
+		display: block;
+		width: calc(100% - 2.25rem);
+		height: 21.875rem;
+		object-fit: cover;
+
+		margin-right: 2.25rem;
+		margin-bottom: 1.5rem;
+		margin-left: .75rem;
+		z-index: 1;
+
+		&--single{
+			height: 31.25rem;
+		}
+
+		&--related{
+			width: calc(100% - 1.125rem);
+			height: 13.5rem;
+			margin-right: 1.125rem;
+			margin-bottom: .75rem;
+			margin-left: .375rem;
+		}
+	}
+}

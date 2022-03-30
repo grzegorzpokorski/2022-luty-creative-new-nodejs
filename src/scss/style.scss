@@ -1,0 +1,23 @@
+@import './bootstrap/bootstrap';
+@import './fontawesome';
+@import './font';
+
+@import './modules/promo';
+@import './modules/banner';
+@import './modules/footer';
+@import './modules/cards';
+@import './modules/archive-header';
+@import './modules/main-posts';
+@import './modules/single-main-post';
+@import './modules/features';
+@import './modules/feature';
+@import './modules/custom-content';
+@import './modules/process';
+@import './modules/hero';
+@import './modules/helpers';
+
+p{
+	&:last-child{
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,30 @@
+.cards{
+	list-style: none;
+	padding: 0;
+	margin-bottom: 0;
+	row-gap: 1.5rem;
+
+	&__item{
+		border-bottom: 0.1875rem solid $green;
+		z-index: 1;
+	}
+
+	&__icon{
+		font-size: $font-size-base * 3;
+	}
+
+	&__marker{
+		position: relative;
+
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -2.75rem;
+			width: .75rem;
+			height: 1.5rem;
+			background-color: $green;
+			z-index: 0;
+		}
+	}
+}

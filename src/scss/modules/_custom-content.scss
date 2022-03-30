@@ -1,0 +1,64 @@
+.custom-content{
+	column-count: 1;
+	column-gap: 1.5rem;
+
+	&--col-1{
+		@include media-breakpoint-up(md){
+			column-count: 2;
+		}
+	}
+
+	@for $i from 1 to 4{
+		&--col-#{$i}{
+			@include media-breakpoint-up(md){
+				column-count: $i;
+			}
+		}
+	}
+
+	&__avoid-break{
+		break-inside: avoid-column;
+	}
+
+	&__item{
+		margin-bottom: $spacer * 1;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	& ol,
+	& ul{
+		& li{
+			padding-left: .75rem;
+			margin-bottom: .75rem;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			&::marker{
+				color: $green;
+				font-weight: $font-weight-bold;
+			}
+		}
+	}
+
+	@for $i from 1 to 6{
+		& h#{$i}{
+			margin-top: 2rem;
+
+			&:first-child{
+				margin-top: 0;
+			}
+		}
+	}
+
+	img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin-bottom: 1.5rem;
+	}
+}

@@ -1,0 +1,17 @@
+.single-main-post{
+	&__time{
+		position: relative;
+		margin-left: 3rem;
+
+		&:after{
+			content: '';
+			position: absolute;
+			left: -2.5rem;
+			top: 50%;
+			transform: translateY(-50%);
+			height: 0.0625rem;
+			width: 2rem;
+			background-color: $gray;
+		}
+	}
+}

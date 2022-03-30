@@ -1,0 +1,28 @@
+.feature{
+
+	&__icon-wrapper{
+		position: relative;
+		min-width: 8rem;
+		background-color: $green;
+
+		&:after{
+			content: '';
+			display: block;
+			padding-bottom: 100%;
+		}
+	}
+
+	&:hover &__icon{
+		font-size: $font-size-base * 3;
+	}
+
+	&__icon{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: $font-size-base * 2.5;
+		color: $white;
+		transition: all .35s;
+	}
+}
